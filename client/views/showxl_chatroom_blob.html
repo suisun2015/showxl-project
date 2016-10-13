@@ -1,0 +1,99 @@
+<!--================================================================-->
+<!--================================================================-->
+<!--================================================================-->
+<!--================================================================-->
+<br />
+<div id="creator_profile_{{$index}}" class="container-fluid gallery-wrapper" ng-controller="showxl_chatroom_blob" ng-init="onload($index)">
+    <div class="well well-sm">
+        <h3 class="text-center">{{room.roomname}}'s Bio</h3>
+    </div>
+    <div class="container-fluid">
+        <div class="col-sm-2"><p class="pull-left">My Name:</p></div>
+        <div class="col-sm-10"><p class="pull-left">{{room.roomname}}</p></div>
+    </div>
+    <div class="container-fluid">
+        <div class="col-sm-2"><p class="pull-left">My Age:</p></div>
+        <div class="col-sm-10"><p class="pull-left">{{room.age}}y</p></div>
+    </div>
+    <div class="container-fluid">
+        <div class="col-sm-2"><p class="pull-left">My Location:</p></div>
+        <div class="col-sm-10">
+            <p class="pull-left">
+                {{room.city}} <span class="flag-icon flag-icon-{{getRoomCountryFlag()}}"></span>
+                <span ng-if="owner.nickname!=room.nickname" class="text-success"> I'm {{getdistance()}} km away from you</span>
+            </p>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="col-sm-2"><p class="pull-left">My Description:</p></div>
+        <div class="col-sm-10">
+            <p class="pull-left" style="white-space:pre-wrap" id="hostComment">{{room.roomtitle}}</p>
+            <div id="editCommentLink" ng-if="creator" style="clear:both; text-align:left">
+                <a ng-click="editHostComment()" style="cursor:pointer">
+                    <span class="text-danger small">Click here to edit my description</span>
+                </a>
+            </div>
+            <div class="form-group" id="editDescriptionForm">
+                <textarea class="form-control" rows="5" style="resize:none"></textarea>
+                <button type="button" class="btn btn-danger btn-xs" ng-click="updateHostComment()">Save</button>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="container-fluid">
+        <div class="col-sm-2"><p class="pull-left">My Photos:</p></div>
+        <div class="col-sm-10">
+            <div ng-repeat="photo in photos" class="host-photo-wrap">
+                <a class="example-image-link" href="{{getPhoto(photo.url)}}" data-lightbox="uploaded-photos-{{room.roomname}}">
+                    <img class="example-image" data-url="{{getPhoto(photo.url)}}" src="{{getPhoto(photo.url)}}" alt="photo uploaded by host" />
+                </a><!-- image lightbox -->
+                <p ng-if="creator" class="text-center"><button type="button" class="btn btn-danger" ng-click="DeletePhoto(photo._id)">Delete</button></p>
+            </div>
+            <!--AddNewPhoto Button-->
+            <div ng-if="creator" class="host-add-photo-wrap" ng-click="UploadPhoto()">
+                <i class="fa fa-plus fa-5x" aria-hidden="true"></i>
+                <h3>Add New Photo</h3>
+            </div>
+            <input id="upload-photo-{{$index}}" type="file" accept="image/*" style="display: none;">
+        </div>
+    </div>
+    <br/>
+    <div class="container-fluid">
+        <div class="col-sm-10 col-sm-offset-2">
+            <!-- progress bar -->
+            <div id="upload_photo_progress_{{$index}}" class="progress" style="display:none">
+                <div class="progress-bar" role="progressbar"></div>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="container-fluid">
+        <div class="col-sm-2"><p class="pull-left">My Videos:</p></div>
+        <div class="col-sm-10">
+            <!--<div ng-repeat="video in videos" class="host-video-wrap" ng-mouseenter="showControls($event)" ng-mouseleave="hideControls($event)">-->
+            <div ng-repeat="video in videos" class="host-video-wrap">
+                <video width="240" height="160" preload="auto">
+                    <source src="{{getAnimation(video.url)}}">
+                    Your browser does not support the video tag.
+                </video>
+                <p ng-if="creator" class="text-center"><button type="button" class="btn btn-danger" ng-click="DeleteVideo(video._id)">Delete</button></p>
+                <img src="images/play-button-overlay.png" alt="play video in fullscreen" ng-click="videoFullscreen($event)"/>
+            </div>
+            <!--AddNewVideo Button-->
+            <div ng-if="creator" class="host-add-video-wrap" ng-click="UploadVideo()">
+                <i class="fa fa-plus fa-5x" aria-hidden="true"></i>
+                <h3>Add New Video</h3>
+            </div>
+            <input id="upload-video-{{$index}}" type="file" accept="video/*" style="display: none;">
+        </div>
+    </div>
+    <br/>
+    <div class="container-fluid">
+        <div class="col-sm-10 col-sm-offset-2">
+            <!-- progress bar -->
+            <div id="upload_video_progress_{{$index}}" class="progress" style="display:none">
+                <div class="progress-bar" role="progressbar"></div>
+            </div>
+        </div>
+    </div>
+</div>

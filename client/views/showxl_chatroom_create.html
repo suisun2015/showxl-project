@@ -1,0 +1,35 @@
+<div id="goliveCamModal" ng-init="onload()">
+    <div class="modal-header" style="cursor:move">
+        <button type="button" class="close" ng-click="onCancel()">&times;</button>
+        <h4 class="modal-title">Go Live</h4>
+    </div>
+    <div class="modal-body">
+        <div class="container-fluid">
+
+            <div class="row" id="photoCanvas">
+                <img id="myPhoto" src="images/avatar.jpg" alt="photo preview - captured or uploaded">
+                <video id="localVideo" autoplay muted></video>
+            </div>
+            <br />
+            <div class="row" id="camBtnWrap">
+                <div class="col-xs-9">
+                    <div class="form-group">
+                        <div class="form-group" id="setWebcamBtn">
+                            <select class="form-control" id="videoSource"></select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-group" id="setMicBtn">
+                            <select class="form-control" id="audioSource"></select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <button class="btn btn-default" type="button" id="snapShotBtn" data-dismiss="modal" ng-click="CreateOwnerRoom()">
+                        <h4>GO<br />LIVE</h4>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

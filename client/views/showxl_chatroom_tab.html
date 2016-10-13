@@ -1,0 +1,19 @@
+<div ng-controller="showxl_chatroom_tab" id="chattabs">
+
+  <div class="container-fluid">
+    <tabset class="tab-container">
+      <tab ng-repeat="tab in tabs" active="tab.active" ng-click="onClickTab($index)">
+        <tab-heading>
+          <span style="font-size:0.9em; margin-top:3px;">
+            <i class="fa {{tab.type}}" aria-hidden="true"></i> {{tab.title}}
+          </span>
+          <ng-include src="getCloseTag(tab)"></ng-include>
+        </tab-heading>
+        <ng-include src="tab.url"></ng-include>
+      </tab>
+    </tabset>
+  </div>
+</div>
+<!--/////////////////////////////////-->
+<img src="images/ArrowDown.gif" id="newMyRoomEventArrow"/>
+<!--/////////////////////////////////-->

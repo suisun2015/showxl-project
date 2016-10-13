@@ -1,0 +1,160 @@
+#privateMsgModal {
+    overflow: hidden;
+}
+#privateMsgModal .modal-dialog {
+    /*margin-right: 0;*/
+    margin-left: 140px;
+    /*margin-top: 200px;*/
+}
+
+#privateMsgModal .modal-body {
+    height: 450px;	    overflow-y: auto;	    padding: 0;
+}
+
+#privateMsgModal .modal-body .container-fluid {
+    padding: 0;
+}
+#privateMsgModal .new-private-msg {
+    background: #d9edf7;
+}
+#privateMsgModal .new-private-msg:hover {
+    background: #c4e3f3;
+}
+#privateMsgModal .read-private-msg {
+    
+}
+#privateMsgModal .modal-body .summary-part {
+    border: 0px solid red;      box-sizing: border-box;
+    width: calc(100% - 196px);      float: left;
+    margin-left: 10px;       padding-top: 4px;
+}
+
+#privateMsgModal .summary-part .prvmsg-notice img.img-thumbnail {
+    display: block;
+    border: 0;
+    background: url("../images/photo_prvmsg.png") no-repeat;
+    width: 64px; /* Width of new image */
+    height: 64px; /* Height of new image */
+    padding-left: 64px; /* Equal to width of new image */
+}
+#privateMsgModal .summary-part .prvmsg-notice video {
+    display: none;
+}
+#privateMsgModal .summary-part .prvmsg-notice img.hidden-poster {
+    width: 64px;    height: 64px;
+    display: block !important;
+}
+
+/*///////////////////////////////*/
+/*///////////////////////////////*/
+
+#privateChatModal .prvchat-title h4 {
+    display: inline-block;
+    margin: 0 0 0 10px;     color: gray;
+    
+    max-width: 40%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#privateChatModal .prvchat-title img {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    margin: 0;
+}
+#privateChatModal .prvchat-title button {
+    display: inline-block;
+    margin: 0;
+}
+#privateChatModal .modal-footer .emoji-picker-icon {
+    right: 180px !important;
+}
+
+/* PrvMsg Photo Modal styles */
+#prvmsgPhotoModal .modal-header {
+    background: #d9534f;	color: white;
+    cursor: move;
+}
+#prvmsgPhotoModal .modal-content {
+    padding: 0;
+}
+#prvmsgPhotoModal #photoCanvas {
+    margin-left: 10%;       margin-right: 10%;
+    border: 1px solid #dddddd;      box-sizing: border-box;
+    padding: 3px;       position: relative;
+    background: black;
+}
+#prvmsgPhotoModal #photoCanvas img {
+    width: 100%;    height: auto;
+}
+#prvmsgPhotoModal #photoCanvas video {
+    border: 0px solid olive;      box-sizing: border-box;
+    position: absolute;     top: 0;     left: 0;
+    width: 100%;    height: 100%;
+    opacity: 0;
+}
+#prvmsgPhotoModal #camBtnWrap {
+    padding-left: 0;      padding-right: 0;
+}
+#prvmsgPhotoModal #camBtnWrap > div {
+    padding-left: 3px;    padding-right: 3px;
+}
+@media screen and (max-width: 540px) {
+    #prvmsgPhotoModal #camBtnWrap {
+        padding-left: 2%;      padding-right: 2%;
+    }
+}
+#prvmsgPhotoModal #setWebcamBtn {
+    width: 100%;
+}
+#prvmsgPhotoModal #setMicrophoneBtn {
+    width: 100%;
+}
+#prvmsgPhotoModal #snapShotBtn {
+    width: 100%;    height: 84px;   line-height: 84px;      padding-top: 6px;
+    overflow: hidden;
+}
+/*//////////////////////////*/
+
+/* PrvMsg Video Modal styles */
+#prvmsgVideoModal .modal-header {
+    background: #d9534f;	color: white;
+    cursor: move;
+}
+#prvmsgVideoModal .modal-content {
+    padding: 0;
+}
+#prvmsgVideoModal #photoCanvas {
+    margin-left: 10%;       margin-right: 10%;
+    border: 1px solid #dddddd;      box-sizing: border-box;
+    padding: 3px;       position: relative;
+    background: black;
+}
+#prvmsgVideoModal #photoCanvas img {
+    width: 100%;    height: auto;
+}
+#prvmsgVideoModal #photoCanvas video {
+    border: 0px solid olive;      box-sizing: border-box;
+    position: absolute;     top: 0;     left: 0;
+    width: 100%;    height: 100%;
+    opacity: 0;
+}
+#prvmsgVideoModal #camBtnWrap {
+    padding-left: 0;      padding-right: 0;
+}
+#prvmsgVideoModal #camBtnWrap > div {
+    padding-left: 3px;    padding-right: 3px;
+}
+@media screen and (max-width: 540px) {
+    #prvmsgVideoModal #camBtnWrap {
+        padding-left: 2%;      padding-right: 2%;
+    }
+}
+#prvmsgVideoModal #setWebcamBtn {
+    width: 100%;
+}
+#prvmsgVideoModal #setMicrophoneBtn {
+    width: 100%;
+}
+/*//////////////////////////*/

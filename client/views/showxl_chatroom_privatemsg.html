@@ -1,0 +1,45 @@
+<div id="privateMsgModal" ng-init="onload()">
+    <div class="modal-header" style="cursor:move">
+        <button type="button" class="close" ng-click="onCancel()">&times;</button>
+        <h4 class="modal-title text-center text-muted">Private Messages</h4>
+    </div>
+    <div class="modal-body">
+        <div class="list-group">
+            <div ng-repeat="chat in chats">
+                <a ng-if="chat.bRead==0" class="list-group-item new-private-msg" ng-click="enterPrvChatModal(chat)">
+                    <div class="container-fluid">
+                        <div class="pull-left" style="width:60px">
+                            <img src="{{getPhoto(chat.photo)}}" class="img-thumbnail img-circle" style="width:60px; height:60px">
+                        </div>
+                        <div class="summary-part" style="word-wrap:break-word">
+                            <p><strong>{{chat.from}}</strong></p>
+                            <p class="text-muted small prvmsg-notice" ng-bind-html="chat.message | trustAsHtml"></p>
+                        </div>
+                        <div class="pull-right">
+                            <p class="text-muted small">{{ chat.date||randomDate() | date:'y MMM d h:mma' }}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div ng-repeat="chat in chats">
+                <a ng-if="chat.bRead==1" class="list-group-item read-private-msg" ng-click="enterPrvChatModal(chat)">
+                    <div class="container-fluid">
+                        <div class="pull-left" style="width:60px">
+                            <img src="{{getPhoto(chat.photo)}}" class="img-thumbnail img-circle" style="width:60px; height:60px">
+                        </div>
+                        <div class="summary-part" style="word-wrap:break-word">
+                            <p><strong>{{chat.from}}</strong></p>
+                            <p class="text-muted small prvmsg-notice" ng-bind-html="chat.message | trustAsHtml"></p>
+                        </div>
+                        <div class="pull-right">
+                            <p class="text-muted small">{{ chat.date||randomDate() | date:'y MMM d h:mma' }}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--////////////////////////////////////////////////////////////////////////-->
+<!--////////////////////////////////////////////////////////////////////////-->

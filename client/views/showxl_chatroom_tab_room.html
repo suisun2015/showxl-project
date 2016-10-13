@@ -1,0 +1,110 @@
+<div id="open-room-wrapper-{{GlobalIndex}}" ng-controller="showxl_chatroom_tab_room" ng-init="onload(tab,$index)" class="container-fluid open-room-wrapper">
+    <div id="chatroom-section-{{GlobalIndex}}" class="chatroom-section">
+        <div id="col-livecams-wrap-{{GlobalIndex}}" class="col-livecams-wrap">
+            <div id="livecam-thumbnail-0-{{GlobalIndex}}" class="livecam-thumbnail" style="opacity:0" ng-click="onVideo(0)"
+                    ng-mouseenter="showCamCtrl($event, 0)" ng-mouseleave="hideCamCtrl($event, 0)">
+                <img src="{{getPhoto(0)}}" alt="webcam of chatroom's host">
+                <video autoplay></video>
+                <!-- volume ON : fa-volume-up | OFF : fa-volume-off -->
+                <i class="fa fa-volume-up" aria-hidden="true" ng-click="volumeOnOff($event, 0)"></i>
+                <!-- button to close cam of user itself -->
+                <span class="glyphicon glyphicon-remove" aria-hidden="true" ng-click="shutMyCam($event, 0)"></span>
+            </div>
+            <div id="livecam-thumbnail-1-{{GlobalIndex}}" class="livecam-thumbnail" style="opacity:0" ng-click="onVideo(1)"
+                    ng-mouseenter="showCamCtrl($event, 1)" ng-mouseleave="hideCamCtrl($event, 1)">
+                <img src="{{getPhoto(1)}}" alt="webcam of current user">
+                <video autoplay></video>
+                <!-- volume ON : fa-volume-up | OFF : fa-volume-off -->
+                <i class="fa fa-volume-up" aria-hidden="true" ng-click="volumeOnOff($event, 1)"></i>
+                <!-- button to close cam of user itself -->
+                <span class="glyphicon glyphicon-remove" aria-hidden="true" ng-click="shutMyCam($event, 1)"></span>
+            </div>
+            <div id="livecam-thumbnail-2-{{GlobalIndex}}" class="livecam-thumbnail" style="opacity:0" ng-click="onVideo(2)"
+                    ng-mouseenter="showCamCtrl($event, 2)" ng-mouseleave="hideCamCtrl($event, 2)">
+                <img src="{{getPhoto(2)}}" alt="webcam of other user">
+                <video autoplay></video>
+                <!-- volume ON : fa-volume-up | OFF : fa-volume-off -->
+                <i class="fa fa-volume-up" aria-hidden="true" ng-click="volumeOnOff($event, 2)"></i>
+                <!-- button to close cam of user itself -->
+                <span class="glyphicon glyphicon-remove" aria-hidden="true" ng-click="shutMyCam($event, 2)"></span>
+            </div>
+            <div id="livecam-thumbnail-3-{{GlobalIndex}}" class="livecam-thumbnail" style="opacity:0" ng-click="onVideo(3)"
+                    ng-mouseenter="showCamCtrl($event, 3)" ng-mouseleave="hideCamCtrl($event, 3)">
+                <img src="{{getPhoto(3)}}" alt="webcam of other user">
+                <video autoplay></video>
+                <!-- volume ON : fa-volume-up | OFF : fa-volume-off -->
+                <i class="fa fa-volume-up" aria-hidden="true" ng-click="volumeOnOff($event, 3)"></i>
+                <!-- button to close cam of user itself -->
+                <span class="glyphicon glyphicon-remove" aria-hidden="true" ng-click="shutMyCam($event, 3)"></span>
+            </div>
+            <div id="livecam-thumbnail-4-{{GlobalIndex}}" class="livecam-thumbnail" style="opacity:0" ng-click="onVideo(4)"
+                    ng-mouseenter="showCamCtrl($event, 4)" ng-mouseleave="hideCamCtrl($event, 4)">
+                <img src="{{getPhoto(4)}}" alt="webcam of other user">
+                <video autoplay></video>
+                <!-- volume ON : fa-volume-up | OFF : fa-volume-off -->
+                <i class="fa fa-volume-up" aria-hidden="true" ng-click="volumeOnOff($event, 4)"></i>
+                <!-- button to close cam of user itself -->
+                <span class="glyphicon glyphicon-remove" aria-hidden="true" ng-click="shutMyCam($event, 4)"></span>
+            </div>
+            <div id="livecam-thumbnail-5-{{GlobalIndex}}" class="livecam-thumbnail" style="opacity:0" ng-click="onVideo(5)"
+                    ng-mouseenter="showCamCtrl($event, 5)" ng-mouseleave="hideCamCtrl($event, 5)">
+                <img src="{{getPhoto(5)}}" alt="make your webcam live">
+                <video autoplay></video>
+                <!-- volume ON : fa-volume-up | OFF : fa-volume-off -->
+                <i class="fa fa-volume-up" aria-hidden="true" ng-click="volumeOnOff($event, 5)"></i>
+                <!-- button to close cam of user itself -->
+                <span class="glyphicon glyphicon-remove" aria-hidden="true" ng-click="shutMyCam($event, 5)"></span>
+            </div>
+        </div>
+        <div id="localvideo-frame-large-{{GlobalIndex}}" class="col-activecam-canvas">
+            <img src="{{getCreatorPhoto()}}" alt="active webcam broadcasts here">
+            <video id="localvideo-large-{{GlobalIndex}}" autoplay></video>
+            <h3 class="camhost-info-title" style="word-break:break-all; text-align:left; margin-right:10px">
+                {{GetTitle()}}
+            </h3>
+        </div>
+        <div id="col-chatmsgs-wrap-{{GlobalIndex}}" class="col-chatmsgs-wrap"><!-- chat section -->
+            <div class="container">
+                <div class="row" id="ctrlMsgBtnWrap">
+                    <div class="col-xs-3">
+                        <a ng-click="onClickPrvMsgModalTab()" title="Private Message" style="cursor:pointer"
+                                data-ng-style="privateMessages == 0? {border:'0'} : {border:'1px solid #d9534f'}">
+                            <i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i>
+                            <span class="top-label label label-danger"
+                                    data-ng-style="privateMessages == 0? {color:'white'} : {color:'yellow'}">{{privateMessages}}</span>
+                        </a>
+                        <audio id="newPrvmsgAlarm" preload><!-- alarm ring 4 new prvmsg -->
+                            <source src="audios/new-prvmsg.mp3" type="audio/mpeg" />
+                            <source src="audios/new-prvmsg.ogg" type="audio/ogg" />
+                        </audio>
+                    </div>
+                    <div class="col-xs-3">
+                        <a ng-click="onClickPubChatTab()" title="Public Chat" style="cursor:pointer">
+                            <i class="fa fa-comments-o fa-2x" aria-hidden="true"></i>
+                        </a>
+                        <div class="red-ball-indicator" style="{{active[0].active}}"></div>
+                    </div>
+                    <div class="col-xs-3">
+                        <a ng-click="onClickJoinedUserTab()" title="Neighbors" style="cursor:pointer">
+                            <i class="fa fa-users fa-2x" aria-hidden="true"></i><span class="top-label label label-danger">{{getUserCounts(users)}}</span>
+                        </a>
+                        <div class="red-ball-indicator" style="{{active[1].active}}"></div>
+                    </div>
+                    <div class="col-xs-3">
+                        <a ng-click="onExitRoom()" title="Leave Room" style="cursor:pointer">
+                            <i class="fa fa-sign-out fa-2x" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <!--///////////////////////////////////////////////////////////////-->
+                <div class="row" id="msgBtnPosBar"></div><!-- red position bar -->
+    
+                <div ng-include="'showxl_chatroom_textchat.html'" style="{{active[0].active}}"></div>
+                <div ng-include="'showxl_chatroom_joineduser.html'" style="{{active[1].active}}"></div>
+                <!--///////////////////////////////////////////////////////////////-->
+            </div><!--/container-->
+        </div>
+    </div>
+
+</div>
+<ng-include src="'showxl_chatroom_blob.html'"></ng-include>

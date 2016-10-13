@@ -1,0 +1,59 @@
+<div ng-controller="showxl_chatroom_tab_broadcast" id="channelArea" ng-init="onload(tab)">
+    <div class="show-item-wrapper" id="newChannelWrap">
+        <!-- StartMyShow modal trigger added to [div] tag -->
+        <div class="picture-wrap" ng-click="gotoLive()">
+            <img src="images/noSignal.gif" alt="Start your own show!">
+        </div>
+        <div class="info-in-item">
+            <p>Start your own show!</p>
+            <p>Join us!</p>
+        </div>
+    </div><!-- individual show item -->
+    <div class="show-item-wrapper">
+        <div class="picture-wrap" ng-click="showDialog4CreateRoom()" ng-mouseenter="playOwnerVClip($event)" ng-mouseleave="pauseOwnerVClip($event)">
+            <img src="{{getOwnerPhoto()}}" alt="Your Photo">
+            <video class="myvideo" preload="auto" loop muted>
+                <source src="{{getOwnerAnimation()}}"/>
+            </video>
+        </div>
+        <div class="show-tag" ng-click="showDialog4CreateRoom()" style="cursor:pointer">
+            <h2>{{owner.age}}</h2>
+            <span style="float:left; text-align:left">
+                <p ng-if="owner.incoming==0">{{owner.city}}</p>
+                <!--<p><i class="fa fa-location-arrow" aria-hidden="true"></i> &times; 6m</p>-->
+            </span>
+        </div>
+        <div class="info-in-item">
+            <p class="host-info"><i class="fa fa-star" aria-hidden="true"></i> {{owner.nickname}}</p>
+            <p class="room-status">
+                <ng-include src="getOwnerLiveTag()"></ng-include>
+                <i class="fa fa-eye" aria-hidden="true"></i> {{ownerroom.nVisit}}
+            </p>
+        </div>
+    </div><!-- my(user's) show item -->
+    <div ng-repeat="room in rooms | filter: { nickname: searchString() }" class="show-item-wrapper">
+        <div class="picture-wrap" pre-play ng-click="enterRoom(room)">
+            <img src="{{getPhoto(room)}}" alt="Photo of Room Host">
+            <video class="thevideo" preload="auto" loop muted>
+                <source ng-src="{{getAnimation(room)}}"/>
+            </video>
+        </div>
+        <div class="show-tag" ng-click="enterRoom(room)" style="cursor:pointer">
+            <h2>{{room.age}}</h2>
+            <span ng-if="room.incoming==0" style="float:left; text-align:left">
+                <p>{{ room.city != NaN ? room.city : "- -" }}</p>
+                <p><i class="fa fa-location-arrow" aria-hidden="true"></i> &times; {{getDistance(room)}} km</p>
+            </span>
+        </div>
+        <div class="info-in-item">
+            <p class="host-info"><i class="fa fa-star" aria-hidden="true"></i> {{room.nickname}}</p>
+            <p class="room-status">
+                <ng-include src="getLiveTag(room)"></ng-include>
+                <i class="fa fa-eye" aria-hidden="true"></i> {{room.nVisit}}
+            </p>
+        </div>
+    </div><!-- individual show item -->
+
+</div>
+
+

@@ -1,0 +1,35 @@
+<div id="textChat-{{GlobalIndex}}" ng-controller="showxl_chatroom_textchat" ng-init="onload($index)">
+    <div class="row" id="chat_list" style="overflow-y:auto; overflow-x:hidden">
+        <div ng-repeat="chat in tchats" class="col-sm-12">
+            <div class="row">
+                <div ng-include="getChatContents(chat)"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row input-msg-row">
+        <div class="col-sm-12">
+            <p class="lead emoji-picker-container">
+                <div id="inputTools" class="input-group">
+                    <input type="text" class="form-control" placeholder="Start chat here" data-emojiable="true">
+                    <span ng-if="isowner" class="input-group-btn">
+                        <label class="btn btn-default" id="hostUploadBtn" style="border-radius:0" ng-click="onFileUpload()">
+                            <i class="fa fa-upload" aria-hidden="true"></i>
+                        </label>
+                    </span>
+                    <span class="input-group-btn">
+                        <button class="btn btn-success" type="button" ng-click="doPost()" id="sendMsgBtn">SEND</button>
+                    </span>
+                </div>
+            </p>
+        </div>
+        <input id="upload-input-room-{{GlobalIndex}}" type="file" accept="image/*,video/*" style="display:none">
+        <div class="clearfix"></div>
+        <!--/////////////////////////////////-->
+        <audio id="newMyRoomEventAlarm" preload><!-- alarm ring 4 new prvmsg -->
+            <source src="audios/new-myroom.mp3" type="audio/mpeg" />
+            <source src="audios/new-myroom.ogg" type="audio/ogg" />
+        </audio>
+        <!--/////////////////////////////////-->
+    </div>
+    <!--///////////////////////////////////////////////////////////////-->
+</div><!--/container-->

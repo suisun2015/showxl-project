@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Dynamic Tabs</title>
+    <link rel='stylesheet prefetch' href='js/lib/tabs/angular-material.min.css'>
+    <link rel="stylesheet" href="js/lib/tabs/tabs-style.css">
+   
+  </head>
+
+  <body>
+
+  <div ng-controller="AppCtrl" class="sample tabsdemoDynamicTabs" layout="column" ng-cloak="" ng-app="MyApp">
+ 
+  <md-content class="md-padding">
+    <md-tabs md-selected="selectedIndex" md-border-bottom="" md-autoselect="">
+      <md-tab ng-repeat="tab in tabs" ng-disabled="tab.disabled" label="{{tab.title}}">
+
+        <!--<div class="demo-tab tab{{$index%4}}" style="padding: 25px; text-align: center;">
+          <div ng-bind="tab.content"></div>
+          <br>
+          <button class="md-primary md-raised" ng-click="removeTab( tab )" ng-disabled="tabs.length <= 1">Remove Tab</button>
+        </div>-->
+        
+      </md-tab>
+    </md-tabs>
+  </md-content>
+
+</div>
+
+<!--
+Copyright 2016 Google Inc. All Rights Reserved. 
+Use of this source code is governed by an MIT-style license that can be in foundin the LICENSE file at http://material.angularjs.org/license.
+-->
+<script src="js/lib/angularjs-1.5.7/angular.min.js"></script>
+<script src="js/lib/angularjs-1.5.7/angular-route.js"></script>
+<script src="js/lib/angularjs-1.5.7/angular-animate.min.js"></script>
+<script src="js/lib/angularjs-1.5.7/angular-aria.min.js"></script>
+<script src="js/lib/angularjs-1.5.7/angular-messages.min.js"></script>
+<script src='js/lib/tabs/svg-assets-cache.js'></script>
+<script src='js/lib/tabs/angular-material.min.js'></script>
+<script src="js/tabs.js"></script>
+
+    
+    
+    
+  </body>
+</html>

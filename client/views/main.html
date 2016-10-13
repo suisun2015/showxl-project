@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="SHOWxl">
+    <meta name="author" content="Glennda_JinStar_Robbie">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <title>SHOWxl</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="js/lib/bootstrap-3.3.6/css/bootstrap.min.css">
+    <!-- Jasny Bootstrap CSS -->
+    <link rel="stylesheet" href="js/lib/jasny-bootstrap-3.1.3/css/jasny-bootstrap.min.css">
+    <!-- Font-awesome core CSS -->
+    <link rel="stylesheet" href="js/lib/font-awesome-4.6.3/css/font-awesome.min.css">
+    <!-- AngularJS -->
+    <!--<script src="js/lib/angularjs-1.5.7/angular.min.js"></script>-->
+    <script src="js/lib/angularjs-chat/angular-1.2.1.min.js"></script>
+    <!-- Custom styles for this project -->
+    <link rel='stylesheet' href='css/style_main.css' />
+</head>
+<body>
+    <div class="container-fluid" style="padding: 0;">
+        <div class="row" id="titleBar">
+            <div id="leftPart">
+                <img src="images/icon_cam.png" alt="icon logo">
+            </div>
+            <div id="centerPart">
+                <img src="images/logo.jpg" alt="motto logo">
+            </div>
+            <div id="rightPart">
+                <div class="userinfo-section">
+                    <a href="#none">
+                        <div class="info_avatar"><img src="images/user.png" alt="registered user"></div>
+                        <div class="info_nickname">Glenn</div>
+                    </a>
+                </div>
+                <div class="golive-cam-section" data-toggle="modal" data-target="#goliveCamModal">
+                    <img src="images/golive.png" alt="Go live your webcam">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-container">
+        <!-- top navbar -->
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header" id="topNavBar">
+                    <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".sidebar-nav">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="col-xs-5 col-sm-5 pull-right">
+                        <form class="navbar-form" role="search" id="searchForm">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <a class="navbar-brand" href="#">Online Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row row-offcanvas row-offcanvas-left">
+                <!-- sidebar -->
+                <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+                    <div class="list-group">
+                        <li class="list-group-item list-group-item-danger">Trending</li>
+                        <a href="#" class="list-group-item"><span class="badge">546</span>Dan Hill</a>
+                        <a href="#" class="list-group-item"><span class="badge">375</span>Emilie Turner</a>
+                        <a href="#" class="list-group-item"><span class="badge">195</span>Katie Wilson</a>
+                        <a href="#" class="list-group-item"><span class="badge">94</span>Taylor O\'Farell</a>
+                    </div>
+                    <div class="list-group">
+                        <li class="list-group-item list-group-item-danger">Trending tags</li>
+                        <a href="#" class="list-group-item">#musicians</a>
+                        <a href="#" class="list-group-item">#dance</a>
+                        <a href="#" class="list-group-item">#girls</a>
+                        <a href="#" class="list-group-item">#sleeping squad</a>
+                        <a href="#" class="list-group-item">#guys</a>
+                    </div>
+                </div>
+                <!-- main area -->
+                <div class="col-xs-12 col-sm-9" id="channelArea">
+                    <div class="show-item-wrapper" id="newChannelWrap">
+                        <!-- StartMyShow modal trigger added to [div] tag -->
+                        <div class="picture-wrap" data-toggle="modal" data-target="#goliveCamModal">
+                            <img src="images/noSignal.gif" alt="Start your own show!">
+                        </div>
+                        <div class="info-in-item">
+                            <p>Start your own show!</p>
+                            <p>Join us!</p>
+                        </div>
+                    </div><!-- individual show item -->
+                    <div class="show-item-wrapper">
+                        <div class="picture-wrap">
+                            <img src="images/avatar.jpg" alt="#">
+                            <video class="thevideo" preload="auto" loop>
+                                <source src="images/movie.ogg" type="video/ogg" />
+                            </video>
+                        </div>
+                        <p class="show-tag">#youtuber</p>
+                        <div class="info-in-item">
+                            <p class="host-info"><i class="fa fa-star" aria-hidden="true"></i> 17 RamonaHart</p>
+                            <p class="room-status">
+                                <i class="fa fa-video-camera" aria-hidden="true"></i>&nbsp;Live&nbsp;&nbsp;
+                                <i class="fa fa-eye" aria-hidden="true"></i> 290
+                            </p>
+                        </div>
+                    </div><!-- individual show item -->
+                    <div class="show-item-wrapper">
+                        <div class="picture-wrap">
+                            <img src="images/avatar.jpg" alt="#">
+                            <video class="thevideo" preload="auto" loop>
+                                <source src="images/movie.ogg" type="video/ogg" />
+                            </video>
+                        </div>
+                        <p class="show-tag">#guys</p>
+                        <div class="info-in-item">
+                            <p class="host-info"><i class="fa fa-star" aria-hidden="true"></i> 45 SamTheMule</p>
+                            <p class="room-status">
+                                <i class="fa fa-video-camera" aria-hidden="true"></i>&nbsp;Live&nbsp;&nbsp;
+                                <i class="fa fa-eye" aria-hidden="true"></i> 120
+                            </p>
+                        </div>
+                    </div><!-- individual show item -->
+                    <div class="show-item-wrapper">
+                        <div class="picture-wrap">
+                            <img src="images/avatar.jpg" alt="#">
+                            <video class="thevideo" preload="auto" loop>
+                                <source src="images/movie.ogg" type="video/ogg" />
+                            </video>
+                        </div>
+                        <p class="show-tag">#girls</p>
+                        <div class="info-in-item">
+                            <p class="host-info"><i class="fa fa-star" aria-hidden="true"></i> 8 Hannah Parks</p>
+                            <p class="room-status">
+                                <i class="fa fa-video-camera" aria-hidden="true"></i>&nbsp;Live&nbsp;&nbsp;
+                                <i class="fa fa-eye" aria-hidden="true"></i> 297
+                            </p>
+                        </div>
+                    </div><!-- individual show item -->
+                    <div class="show-item-wrapper">
+                        <div class="picture-wrap">
+                            <img src="images/avatar.jpg" alt="#">
+                            <video class="thevideo" preload="auto" loop>
+                                <source src="images/movie.ogg" type="video/ogg" />
+                            </video>
+                        </div>
+                        <p class="show-tag">#sports</p>
+                        <div class="info-in-item">
+                            <p class="host-info"><i class="fa fa-star" aria-hidden="true"></i> 10 John Eric</p>
+                            <p class="room-status">
+                                <i class="fa fa-video-camera" aria-hidden="true"></i>&nbsp;Live&nbsp;&nbsp;
+                                <i class="fa fa-eye" aria-hidden="true"></i> 135
+                            </p>
+                        </div>
+                    </div><!-- individual show item -->
+                    <div class="show-item-wrapper">
+                        <div class="picture-wrap">
+                            <img src="images/avatar.jpg" alt="#">
+                            <video class="thevideo" preload="auto" loop>
+                                <source src="images/movie.ogg" type="video/ogg" />
+                            </video>
+                        </div>
+                        <p class="show-tag">#animals</p>
+                        <div class="info-in-item">
+                            <p class="host-info"><i class="fa fa-star" aria-hidden="true"></i> 32 Elsa Tobin</p>
+                            <p class="room-status">
+                                <i class="fa fa-video-camera" aria-hidden="true"></i>&nbsp;Live&nbsp;&nbsp;
+                                <i class="fa fa-eye" aria-hidden="true"></i> 86
+                            </p>
+                        </div>
+                    </div><!-- individual show item -->
+                    <div class="show-item-wrapper">
+                        <div class="picture-wrap">
+                            <img src="images/avatar.jpg" alt="#">
+                            <video class="thevideo" preload="auto" loop>
+                                <source src="images/test.webm" type="video/webm" />
+                            </video>
+                        </div>
+                        <p class="show-tag">#girls</p>
+                        <div class="info-in-item">
+                            <p class="host-info"><i class="fa fa-star" aria-hidden="true"></i> 41 Sergei Napkin</p>
+                            <p class="room-status">
+                                <i class="fa fa-video-camera" aria-hidden="true"></i>&nbsp;Live&nbsp;&nbsp;
+                                <i class="fa fa-eye" aria-hidden="true"></i> 52
+                            </p>
+                        </div>
+                    </div><!-- individual show item -->
+                </div><!-- /.col-xs-12 main -->
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </div><!--/.page-container-->
+
+    <!-- Go Live WebCam Modal Modal -->
+    <div class="modal fade" id="goliveCamModal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Go Live</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row" id="photoCanvas">
+                            <img src="images/avatar.jpg" class="img-thumbnail" alt="photo preview - captured or uploaded">
+                        </div>
+                        <br />
+                        <div class="row" id="camBtnWrap">
+                            <div class="col-xs-9">
+                                <div class="form-group">
+                                    <!--<button type="button" class="btn btn-default" id="setWebcamBtn">Camera <span class="caret"></span></button>-->
+                                    <div class="btn-group" style="width: 100%;">
+                                        <button type="button" id="setWebcamBtn" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Camera <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Action</a></li>
+                                            <li><a href="#">Another action</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="btn-group" style="width: 100%;">
+                                        <button type="button" id="setMicrophoneBtn" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Microphone <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Action</a></li>
+                                            <li><a href="#">Another action</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-3">
+                                <a href="/chatroom" class="btn btn-default" role="button" id="snapShotBtn">
+                                    <h4>GO<br />LIVE</h4>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- Modal content ends here -->
+        </div>
+    </div>
+    <!--///////////////////-->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/lib/jquery1.12.4.min.js"></script><!-- core jQuery library 4 Bootstrap -->
+    <script src="js/lib/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/lib/jasny-bootstrap-3.1.3/js/jasny-bootstrap.min.js"></script>
+
+    <!-- Add Google Maps -->
+    <!--key is "AIzaSyCl86zCCc9jSA_CD8NspnMpoXLOD4MdpJw" made by Robbie-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCl86zCCc9jSA_CD8NspnMpoXLOD4MdpJw" type="text/javascript"></script>
+    <!-- DIY JavaScript -->
+    <script src="js/sidebar_toggle.js"></script>
+    <script src="js/hover_video.js"></script>
+
+</body>
+</html>

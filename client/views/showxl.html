@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="SHOWxl">
+    <meta name="author" content="Glennda_JinStar_Robbie">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <title>SHOWxl</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="js/lib/bootstrap-3.3.6/css/bootstrap.min.css">
+    <!-- Jasny Bootstrap CSS -->
+    <link rel="stylesheet" href="js/lib/jasny-bootstrap-3.1.3/css/jasny-bootstrap.min.css">
+    <!-- Font-awesome core CSS -->
+    <link rel="stylesheet" href="js/lib/font-awesome-4.6.3/css/font-awesome.min.css">
+
+    <!-- loadingbar -->
+    <link href='js/lib/loadingbar/loading-bar.css' rel='stylesheet' />
+
+
+    <!-- Custom styles for this project -->
+    <link rel='stylesheet' href='css/style_landing.css' />
+    <link rel='stylesheet' href='css/style_main.css' />
+
+    <!-- Country Flag-icon CSS -->
+    <link href="css/flag-icon-css-master/assets/docs.css" rel="stylesheet">
+    <link href="css/flag-icon-css-master/css/flag-icon.css" rel="stylesheet">
+    <!-- Image Lightbox -->
+    <link rel="stylesheet" href="js/lib/lightbox2/css/lightbox.min.css">
+    <!-- Angular Toastr -->
+    <link rel="stylesheet" type="text/css" href="js/lib/angular-toastr/angular-toastr.css" />
+    <!-- emoji-picker -->
+    <link href="js/lib/emoji-picker/css/nanoscroller.css" rel="stylesheet">
+    <link href="js/lib/emoji-picker/css/emoji.css" rel="stylesheet">
+    <!-- Custom styles for this project -->
+    <link rel='stylesheet' href='css/style_chatroom.css' />
+    <link rel="stylesheet" href="js/lib/tabs/style_chrometabs.css">
+    <link rel='stylesheet' href='css/style_chatroom_privatemsg.css' />
+
+</head>
+
+<body ng-app="showxlApp">
+
+<ng-view></ng-view>
+
+<script src="js/webrtc_api.js"></script>
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/lib/jquery1.12.4.min.js"></script><!-- core jQuery library 4 Bootstrap -->
+<script src="js/lib/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Add Google Maps -->
+<!--key is "AIzaSyCl86zCCc9jSA_CD8NspnMpoXLOD4MdpJw" made by Robbie-->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCl86zCCc9jSA_CD8NspnMpoXLOD4MdpJw"></script>
+
+<script src="js/lib/angularjs-1.5.7/angular.min.js"></script>
+<script src="js/lib/angularjs-1.5.7/angular-route.js"></script>
+<!-- ng-bind-html requires ngSanitize module -->
+<script src="js/lib/angularjs-1.5.7/angular-sanitize.js"></script>
+<script src="js/lib/jasny-bootstrap-3.1.3/js/jasny-bootstrap.min.js"></script>
+
+<script src="js/lib/angularjs-1.5.7/angular-animate.min.js"></script>
+<script src="js/lib/loadingbar/loading-bar.js"></script>
+<!--socke.io-->
+<script src='socket.io/socket.io.js'></script>
+<script src='js/lib/adapter.js'></script>
+<!--root-->
+<script src="views/showxl_app.js"></script>
+<!--login-->
+<script src="views/showxl_login.js"></script>
+<script src="js/location_gmap.js"></script><!-- No.2 -->
+<!--main-->
+<script src="views/showxl_header_main.js"></script>
+<script src="views/showxl_chatroom_create.js"></script>
+<script src="views/showxl_chatroom_tab_broadcast.js"></script>
+<script src="views/showxl_main.js"></script>
+<!--chat room-->
+<script src="js/lib/tabs/ui-bootstrap-0.12.1-tpls.min.js"></script>
+<script src="views/showxl_chatroom_flow.js"></script>
+<script src="views/showxl_chatroom_tab_profile.js"></script>
+<script src="views/showxl_chatroom_tab.js"></script>
+
+<script src="views/showxl_chatroom_textchat_leftmenu.js"></script>
+<script src="views/showxl_chatroom_textchat.js"></script>
+<script src="views/showxl_chatroom_joineduser.js"></script>
+<script src="views/showxl_chatroom_blob.js"></script>
+<script src="views/showxl_chatroom_tab_room.js"></script>
+<script src="views/showxl_chatroom_privatemsg.js"></script>
+<script src="views/showxl_chatroom_privatechat.js"></script>
+<script src="views/showxl_chatroom_send_photo.js"></script>
+<script src="views/showxl_chatroom_send_video.js"></script>
+<script src="views/showxl_chatroom_tab_room_popmenu.js"></script>
+<script src="views/showxl_header_logout.js"></script>
+<!--image lightbox-->
+<script src="js/lib/lightbox2/js/lightbox-plus-jquery.min.js"></script>
+<!--jquery.ui 4 draggable modal-->
+<script src='js/jquery-ui-1.10.3.js'></script>
+<!--Angular Toastr-->
+<script type="text/javascript" src="js/lib/angular-toastr/angular-toastr.tpls.js"></script>
+<!--emoji-picker-->
+<script src="js/lib/emoji-picker/js/nanoscroller.min.js"></script>
+<script src="js/lib/emoji-picker/js/tether.min.js"></script>
+<script src="js/lib/emoji-picker/js/config.js"></script>
+<script src="js/lib/emoji-picker/js/util.js"></script>
+<script src="js/lib/emoji-picker/js/jquery.emojiarea.js"></script>
+<script src="js/lib/emoji-picker/js/emoji-picker.js"></script>
+<!--video lightbox-->
+
+
+</body>
+</html>

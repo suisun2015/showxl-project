@@ -1,0 +1,20 @@
+<!-- userlog buttons marquee -->
+<div ng-controller="showxl_chatroom_flow" class="container-fluid" style="padding:0; height:65px">
+    <marquee id='NoticeBtnMarquee'>
+        <div onMouseOver="document.getElementById('NoticeBtnMarquee').stop();" onMouseOut="document.getElementById('NoticeBtnMarquee').start();">
+            <a ng-repeat="room in rooms" class="btn btn-default" role="button" ng-click="enterRoom(room)">
+                <div class="notice-img-wrap">
+                    <img src="{{getPhoto(room)}}" alt="This user has performed a new action">
+                </div>
+                <div class="notice-info-wrap">
+                    <p>{{room.nickname + ' ' + room.age +'y '}} <span ng-if="room.incoming==0">{{room.city}}</span> <span ng-if="room.incoming==0" class="flag-icon flag-icon-{{getCountryFlag(room)}}"></span></p>
+                    <p>
+                        <span ng-if="!getColor(room)">upload: </span>
+                        <span ng-if="getColor(room)" class="notice-new-entry-cam">{{getMessage(room)}}</span>
+                        <span ng-if="!getColor(room)" class="notice-new-media">{{getMessage(room)}}</span>
+                    </p>
+                </div>
+            </a>
+        </div>
+    </marquee>
+</div>

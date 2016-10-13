@@ -1,0 +1,295 @@
+body {
+    padding: 0;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: #00B7FF;
+}
+
+/*=======================================================*/
+#titleBar {
+    background: #f94753;
+    width: 100%;    text-align: center;
+    height: 70px;   line-height: 70px;
+    min-width: 768px;
+    margin-right: 0;    margin-left: 0;
+}
+#titleBar #leftPart {
+    float:left;   width:160px;
+}
+#titleBar #leftPart img {
+    width: 150px;   margin-left: 10px;
+}
+#titleBar #rightPart {
+    float:right;    width: 160px;   height: 70px;
+    padding-right: 10px;
+    border: 0px solid blue;     box-sizing: border-box;
+}
+#titleBar #rightPart > div {
+    width: 70px;   height: 70px;
+    padding: 0;
+}
+#titleBar #rightPart .userinfo-section {
+    text-align: center;     float: left;
+}
+#titleBar #rightPart .userinfo-section a {
+    color: white;
+}
+#titleBar #rightPart .userinfo-section .info_avatar {
+    height: 50px;   line-height: 50px;
+}
+#titleBar #rightPart .userinfo-section img {
+    width: 40px;    height: 40px;
+}
+#titleBar #rightPart .userinfo-section .info_nickname {
+    height:20px;	line-height: 20px;      font-size: 0.9em;
+    width: 70px;	white-space: nowrap;    overflow: hidden;   text-overflow: ellipsis;
+}
+#titleBar #rightPart .golive-cam-section {
+    float: right;
+    /*cursor: pointer;*/
+}
+#titleBar #rightPart .golive-cam-section:hover {
+    /*opacity: 0.8;*/
+}
+#titleBar #rightPart .golive-cam-section img {
+    width: 70px;    height: 70px;
+}
+#titleBar #centerPart {
+    margin:0 auto;    display: inline-block;
+    width: 400px;
+}
+#titleBar #centerPart img {
+    width: 100%;
+}
+
+
+/*=== slide sidebar style ===*/
+/*///////////////////////////*/
+.navbar, .page-container {
+    margin-top: 70px;
+}/*customized addition*/
+
+#sidebar {
+    height: 100%;
+    padding-right: 0;
+    padding-top: 0px;
+    border: 0px solid blue;   box-sizing: border-box;
+}
+#sidebar .nav {
+    width: 95%;
+}
+#sidebar li {
+    border:0 #f2f2f2 solid;
+    border-bottom-width:1px;
+}
+#sidebar .list-group a {
+    border: 0;
+}
+#sidebar .list-group .badge {
+    background: white;      color: #555555;
+}
+#topNavBar {
+    border: 0px solid gold;     box-sizing: border-box;
+    width: 100%;
+}
+#searchForm .input-group {
+    width: 60%;
+}
+#topNavBar .navbar-brand {
+    margin-left: 24%;
+}
+#channelArea {
+    border: 0px solid blue;   box-sizing: border-box;
+    /* height is set by jQuery */
+    overflow-x: hidden;   overflow-y: auto;
+    min-width: 220px;
+}
+#channelArea .show-item-wrapper {
+    border: 1px solid #eeeeee;   box-sizing: border-box;
+    float: left;
+    width: 170px;   height: 170px;    margin-right: 10px;   margin-bottom: 10px;
+    position: relative;
+}
+#channelArea .show-item-wrapper .picture-wrap {
+    background: black;
+}
+#channelArea .show-item-wrapper .show-tag {
+    position: absolute;   left: 0;    bottom: 44px;
+    color: white;   padding-left: 10px;
+}
+#channelArea .show-item-wrapper .show-tag > h2 {
+    float: left;     margin: 0 3px 0 0;     padding-right: 6px;
+    border-right: 1px solid white;       box-sizing: border-box;
+}
+#channelArea .show-item-wrapper .show-tag > span > p {
+    margin: 0;
+}
+#channelArea .info-in-item {
+    position: absolute;   left: 0;    bottom: 0;
+    width: 100%;    height: 40px;     padding: 6px;
+
+    background: #eeeeee; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VlZWVlZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjY2NjY2MiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,  #eeeeee 0%, #cccccc 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #eeeeee 0%,#cccccc 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #eeeeee 0%,#cccccc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 ); /* IE6-8 */
+
+}
+#channelArea .info-in-item p {
+    margin: 0;    font-size: 0.85em;
+}
+#channelArea .info-in-item .host-info {
+    font-weight: bold;
+}
+#channelArea .info-in-item .room-status {
+    color: darkgray;
+}
+#channelArea .info-in-item .room-status .fa-video-camera {
+    color: #f94753;   font-size: 1.2em;
+}
+#channelArea .picture-wrap img {
+    width: 168px;    height: 168px;
+}
+#channelArea .picture-wrap video {
+    width: 100%;    height: 128px;
+    object-fit: fill;    opacity: 0;
+    transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -webkit-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    position: absolute;   left: 0;    top: 0;
+}
+#channelArea .picture-wrap video:hover {
+    opacity: 1;   cursor: pointer;
+}
+#channelArea #newChannelWrap img:hover {
+    cursor: pointer;
+}
+#channelArea #newChannelWrap .info-in-item {
+    text-align: center;   color: white;
+
+    background: #7d7e7d; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzdkN2U3ZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwZTBlMGUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,  #7d7e7d 0%, #0e0e0e 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #7d7e7d 0%,#0e0e0e 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #7d7e7d 0%,#0e0e0e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=0 ); /* IE6-8 */
+
+}
+
+/* collapsed sidebar styles */
+@media screen and (max-width: 767px) {
+    .row-offcanvas {
+        position: relative;
+        -webkit-transition: all 0.5s ease-out;
+        -moz-transition: all 0.5s ease-out;
+        transition: all 0.5s ease-out;
+    }
+    .row-offcanvas-right
+    .sidebar-offcanvas {
+        /*right: -41.6%;*/
+        right: -180px;
+    }
+    .row-offcanvas-left
+    .sidebar-offcanvas {
+        /*left: -41.6%;*/
+        left: -180px;
+    }
+    .row-offcanvas-right.active {
+        /*right: 41.6%;*/
+        right: 180px;
+    }
+    .row-offcanvas-left.active {
+        /*left: 41.6%;*/
+        left: 180px;
+    }
+    .sidebar-offcanvas {
+        position: absolute;
+        top: 0;
+        /*width: 41.6%;*/
+        width: 180px;
+    }
+    #sidebar {
+        padding-top: 0px;
+        padding-left: 8px;
+    }
+    #searchForm {
+        padding: 0 10px 0 0;   border: 0;
+    }
+    #topNavBar {
+        width: auto;
+    }
+    #topNavBar .navbar-brand {
+        margin-left: 0;
+    }
+    #searchForm .input-group {
+        width: 100%;
+    }
+}
+/*//////////////////////////*/
+
+/* Go Live WebCam Modal styles */
+#goliveCamModal .modal-header {
+    background: #d9534f;    text-align: center;     color: white;
+}
+#goliveCamModal #photoCanvas {
+    margin-left: 20%;       margin-right: 20%;
+    border: 1px solid #dddddd;      box-sizing: border-box;
+    padding: 3px;       position: relative;
+    background: black;
+}
+#goliveCamModal #photoCanvas img {
+    width: 100%;    height: auto;
+}
+#goliveCamModal #photoCanvas video {
+    border: 0px solid olive;      box-sizing: border-box;
+    position: absolute;     top: 0;     left: 0;
+    width: 100%;    height: 100%;
+    opacity: 0;
+}
+#goliveCamModal #camBtnWrap {
+    padding-left: 15%;      padding-right: 15%;
+}
+#goliveCamModal #camBtnWrap > div {
+    padding-left: 3px;    padding-right: 3px;
+}
+@media screen and (max-width: 540px) {
+    #goliveCamModal #camBtnWrap {
+        padding-left: 2%;      padding-right: 2%;
+    }
+}
+#goliveCamModal #setWebcamBtn {
+    width: 100%;
+}
+#goliveCamModal #setMicrophoneBtn {
+    width: 100%;
+}
+#goliveCamModal #snapShotBtn {
+    width: 100%;    height: 84px;   line-height: 84px;      padding-top: 12px;
+}
+#goliveCamModal #snapShotBtn h4 {
+    color: #f94753;     font-family: myLogoFont;
+}
+/*--------- override ---------*/
+#chattabs #goliveCamModal .container-fluid {
+    min-width: 120px;
+}
+/*//////////////////////////*/
+
+#logoutModal .modal-header {
+    background: #d9534f;    color: white;
+}
+#logoutModal .modal-header h4 {
+    margin: 0;
+}
+#logoutModal .modal-body {
+    text-align: center;
+}
+#logoutModal .modal-body button {
+    margin: 0 10px;
+}

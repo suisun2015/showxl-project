@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="js/lib/bootstrap-3.3.6/css/bootstrap.min.css">
+  <script src="js/lib/jquery-1.11.1.min.js"></script>
+  <script src="js/lib/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <title>Recording</title>
+</head>
+
+<body>
+  <div id="container">
+    <div class="row">
+      <div class="col-md-4">
+        <video id="capture" width="320" height="240" autoplay muted></video>
+      </div>
+      <div class="col-md-4">
+        <video id="recorded" width="320" height="240" autoplay loop></video>
+      </div>
+      <div class="col-md-12">
+        <button id="record">Start Recording</button>
+        <button id="play" disabled>Play</button>
+        <button id="download" disabled>Download</button>
+      </div>
+    </div>
+  </div>
+
+  <script src='js/lib/adapter.js'></script>
+  <script src='js/webrtc_record.js'></script>
+
+</body>
+</html>

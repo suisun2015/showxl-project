@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="description" content="Select Device">
+  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1">
+  <meta id="theme-color" name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="js/lib/bootstrap-3.3.6/css/bootstrap.min.css">
+  <script src="js/lib/jquery-3.1.0.min.js"></script>
+  <script src="js/lib/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+
+  <base target="_blank">
+
+  <title>Select audio and video sources</title>
+
+  <style>
+    div.select {
+      display: inline-block;
+      margin: 0 0 1em 0;
+    }
+    p.small {
+      font-size: 0.7em;
+    }
+    label {
+      width: 12em;
+      display: inline-block;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <video id='localVideo' width="320" height="240" autoplay muted></video>
+      </div>
+      <div class="col-md-4">
+        <canvas></canvas>
+        <button id="snapshot">Take snapshot</button>
+        <button id="save">Save Image</button>
+      </div>
+      <div class="col-md-12">
+        <div class="select">
+          <label for="videoSource">Video source: </label><select id="videoSource"></select>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="select">
+          <label for="audioSource">Audio input source: </label><select id="audioSource"></select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src='js/lib/adapter.js'></script>
+<script src='js/webrtc_device.js'></script>
+</body>
+</html>

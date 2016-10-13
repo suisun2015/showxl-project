@@ -1,0 +1,208 @@
+body {
+    padding: 0;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: #00B7FF;
+}
+
+/*=======================================================*/
+@font-face {
+    font-family: myLogoFont;
+    src: url(calibril.ttf);
+}
+#loginStep1 #logoMark {
+    text-align: center;     margin-top: 150px;
+}
+#loginStep1 #logoMark img {
+    width: 100%;    height: auto;
+}
+#loginStep1 #subjectMotto {
+    text-align: center;
+}
+#loginStep1 #subjectMotto p {
+    font-family: myLogoFont;
+    color: #f94753;
+    font-size: 3em;     letter-spacing: 12px;
+}
+#loginStep1 #enterBtn1 {
+    width: 100%;    height: 60px;
+    color: #f94753;     font-size: 1.8em;       font-family: myLogoFont;
+    border-color: #f94753;      border-left: 0;     border-right: 0;
+    border-radius: 0;
+}
+
+#loginStep2 #enterBtn2 {
+    width: 100%;    height: 60px;
+    color: #f94753;     font-size: 1.5em;       font-family: myLogoFont;
+    border-color: #f94753;      border-left: 0;     border-right: 0;
+    border-radius: 0;
+}
+
+#loginStep3 #enterBtn3 {
+    width: 100%;    height: 60px;
+    color: #f94753;     font-size: 1.5em;       font-family: myLogoFont;
+    border-color: #f94753;      border-left: 0;     border-right: 0;
+    border-radius: 0;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    #loginStep1 #subjectMotto p {
+        font-size: 2.5em;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    #loginStep1 #subjectMotto p {
+        font-size: 2em;     letter-spacing: 8px;
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 767px) {
+    #loginStep1 #subjectMotto p {
+        font-size: 2.4em;       letter-spacing: 6px;
+    }
+}
+@media screen and (min-width: 480px) and (max-width: 599px) {
+    #loginStep1 #subjectMotto p {
+        font-size: 2em;     letter-spacing: 4px;
+    }
+    #loginStep3 #logoMark3 img {
+        width: 80px;    height: auto;
+    }
+    #loginStep3 #logoMark3 h3 {
+        font-size: 0.8em;
+    }
+}
+@media screen and (max-width: 479px) {
+    #loginStep1 #subjectMotto p {
+        font-size: 1.6em;       letter-spacing: 2px;
+    }
+    #loginStep1 #enterBtn1 {
+        font-size: 16px;    white-space: normal;
+    }
+
+    #loginStep2 #enterBtn2 {
+        font-size: 12px;    white-space: normal;    height: 40px;
+    }
+
+    #loginStep3 #enterBtn3 {
+        font-size: 12px;    white-space: normal;    height: 40px;
+    }
+    #loginStep3 #logoMark3 img {
+        width: 80px;    height: auto;
+    }
+    #loginStep3 #logoMark3 h3 {
+        font-size: 0.8em;
+    }
+}
+
+#loginStep2, #loginStep3 {
+    display: none;
+}
+
+#loginStep2 #logoMark2 {
+    text-align: center;     margin-top: 50px;
+}
+#loginStep2 #logoMark2 img {
+    width: 100%;    height: auto;
+}
+#loginStep2 input {
+    border-color: #f94753; 
+}
+#loginStep2 textarea {
+    border-color: #f94753;      resize: none; 
+}
+#loginStep2 #basic-addon1_AGE {
+    background: #f94753;    color: white;       border-color: #f94753;
+}
+#loginStep2 #loadAddPhotoModalBtn {
+    background: #f94753;    border-color: #f94753;
+}
+#loginStep2 #loadAddPhotoModalBtn:hover {
+    background: #c9302c;
+}
+#addPhotoModal .modal-header {
+    background: #f94753;    text-align: center;     color: white;
+}
+#addPhotoModal #photoTypeWrap {
+    padding-left: 25%;      padding-right: 25%;
+}
+#addPhotoModal #photoCanvas {
+    margin-left: 20%;       margin-right: 20%;
+    border: 1px solid #dddddd;      box-sizing: border-box;
+    padding: 0;      text-align: center;
+    position: relative;     background: black;
+}
+#addPhotoModal #photoCanvas img {
+    width: 100%;    height: auto;
+    border: 0;
+}
+#addPhotoModal #photoCanvas video {
+    border: 0px solid mediumpurple;     box-sizing: border-box;
+    position: absolute;     left: 0;    top: 0;
+    width: 100%;     height: 100%;
+    opacity: 0;
+}
+#addPhotoModal #camBtnWrap {
+    padding-left: 15%;      padding-right: 15%;
+}
+#addPhotoModal #camBtnWrap > div {
+    padding-left: 3px;    padding-right: 3px;
+}
+@media screen and (max-width: 540px) {
+    #addPhotoModal #camBtnWrap {
+        padding-left: 2%;      padding-right: 2%;
+    }
+}
+#addPhotoModal #setWebcamBtn {
+    width: 100%;
+}
+#addPhotoModal #decidePhotoBtn {
+    width: 100%;    color: #f94753;
+    font-family: myLogoFont;    font-size: 1.2em;       font-weight: bold;
+}
+#addPhotoModal #snapShotBtn {
+    width: 100%;    height: 84px;   line-height: 84px;
+}
+#addPhotoModal .modal-body .progress {
+    display: none;
+}
+
+#loginStep3 #logoMark3 {
+    border: 0px solid lightpink;    box-sizing: border-box;
+    margin-top: 50px;       padding: 0;
+    position: relative;
+}
+#loginStep3 #logoMark3 img {
+    width: 100px;    height: auto;
+    position: absolute;     left:0;     top: 0;
+}
+#loginStep3 #logoMark3 h3 {
+    color: #e93743;     font-family: myLogoFont;
+}
+@media screen and (min-width: 480px) and (max-width: 599px) {
+    #loginStep3 #logoMark3 img {
+        width: 80px;    height: auto;       top: 4px;
+    }
+    #loginStep3 #logoMark3 h3 {
+        font-size: 1.3em;
+    }
+}
+@media screen and (max-width: 479px) {
+    #loginStep3 #logoMark3 img {
+        width: 70px;    height: auto;       top: 6px;
+    }
+    #loginStep3 #logoMark3 h3 {
+        font-size: 1.1em;
+    }
+}
+#loginStep3 #locationOnMap {
+    height: 300px;
+}
+#loginStep3 #incognitoChk {
+    text-align: center;     color: #e93743;     font-size: 1.2em;       font-family: myLogoFont;
+}
+.gm-style-iw {
+    font-size: 2em !important;	    color: #e93743;
+    font-weight: bold !important;   font-family: myLogoFont;
+}/* customize GMap infowindow */

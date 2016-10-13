@@ -1,0 +1,399 @@
+body {
+    padding: 0;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: #00B7FF;
+}
+
+/*=======================================================*/
+#titleBar {
+    background: #f94753;
+    width: 100%;    text-align: center;
+    height: 70px;   line-height: 70px;
+    min-width: 768px;
+    margin-right: 0;    margin-left: 0;
+}
+#titleBar #leftPart {
+    float:left;   width:160px;
+}
+#titleBar #leftPart img {
+    width: auto;    height: 60px;
+    margin-left: 10px;
+}
+#titleBar #rightPart {
+    float:right;    width: 160px;   height: 70px;
+    padding-right: 10px;
+    border: 0px solid blue;     box-sizing: border-box;
+}
+#titleBar #rightPart > div {
+    width: 70px;   height: 70px;
+    padding: 0;
+}
+#titleBar #rightPart .userinfo-section {
+    text-align: center;     float: left;
+}
+#titleBar #rightPart .userinfo-section a {
+    color: white;
+}
+#titleBar #rightPart .userinfo-section .info_avatar {
+    height: 50px;   line-height: 50px;
+}
+#titleBar #rightPart .userinfo-section img {
+    width: 40px;    height: 40px;
+}
+#titleBar #rightPart .userinfo-section .info_nickname {
+    height:20px;	line-height: 20px;      font-size: 0.9em;
+}
+#titleBar #rightPart .golive-cam-section {
+    float: right;
+}
+#titleBar #rightPart .golive-cam-section img {
+    width: 70px;    height: 70px;
+}
+#titleBar #centerPart {
+    margin:0 auto;    display: inline-block;
+    width: 400px;
+}
+#titleBar #centerPart img {
+    width: 100%;
+}
+
+
+/* userlog buttons marquee */
+#NoticeBtnMarquee {
+    border: 0px solid blue;     box-sizing: border-box;
+    padding-top: 6px;
+}
+#NoticeBtnMarquee a.btn {
+    margin-right: 8px;      padding-left: 6px;
+}
+#NoticeBtnMarquee a.btn .notice-img-wrap {
+    float: left;    width: 40px;    height: 40px;
+    background: black;
+}
+#NoticeBtnMarquee a.btn .notice-img-wrap img {
+    width: 100%;    height: 100%;
+}
+#NoticeBtnMarquee a.btn .notice-info-wrap {
+    float: left;    width: auto;    height: 40px;   margin-left: 6px;
+}
+#NoticeBtnMarquee a.btn .notice-info-wrap p {
+    margin-bottom: 0;   text-align: left;
+}
+#NoticeBtnMarquee a.btn .notice-info-wrap .notice-new-media {
+    color: #f94753;
+}
+#NoticeBtnMarquee a.btn .notice-info-wrap .notice-new-entry-cam {
+    color: #5cb85c;
+}
+/*//////////////////////////*/
+
+
+/* some styles for the chatroom-chrome-tabs */
+#chattabs .container-fluid {
+    padding: 0;     margin-top: 2px;
+    min-width: 768px;
+}
+/*:::::: OVERRIDE STYLE ::::::*/
+#chattabs .tab-content .tab-pane {
+    border: 0px solid pink;     box-sizing: border-box;
+    padding: 0 0 6px 6px;
+}
+#chattabs #channelArea .info-in-item p.host-info, p.room-status {
+    text-align: left;
+}
+#channelArea .info-in-item .host-info {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.tabpanel ul li.addTab {
+    display: none;/* hide [AddNew] tab */
+}
+.tabpanel ul li.stable-tab {
+    height: 26px;
+}
+.tabpanel ul li.prev-next-btns {
+    width: 32px;	height: 26px;
+}
+.ui-widget-content {
+    border: 0;
+}
+.tabpanel {
+    min-width: 768px;/* force to limit width */
+}
+.tabpanel .ui-layout-content > div {
+    border: 0px solid orange;   box-sizing: border-box;
+    padding: 6px;
+    min-width: 760px;
+}
+
+
+#chattabs .open-room-wrapper {
+    padding: 0;
+    border: 0px solid green;   box-sizing: border-box;
+}
+
+.chatroom-section .col-livecams-wrap {
+    float: left;
+    width: 120px;   height: 100%;
+    border: 0px solid skyblue;   box-sizing: border-box;
+}
+.chatroom-section .col-livecams-wrap .livecam-thumbnail {
+    width: 100%;    height: 16%;    margin-bottom: 5px;
+    border-radius: 6px;
+    border: 0px solid green;   box-sizing: border-box;
+    position: relative;     background: black;
+}
+.chatroom-section .col-livecams-wrap .livecam-thumbnail:last-child {
+    margin-bottom: 0;
+}
+.chatroom-section .col-livecams-wrap .livecam-thumbnail img {
+    width: 100%;    height: 100%;
+    border-radius: 6px;
+}
+.chatroom-section .col-livecams-wrap .livecam-thumbnail img:hover {
+    border: 2px solid #ccc;     box-sizing: border-box;
+}
+.chatroom-section .col-livecams-wrap .livecam-thumbnail video {
+    border: 0px solid red;      box-sizing: border-box;
+    position: absolute;     left: 0;    top: 0;
+    width: 100%;    height: 100%;
+    opacity: 0;
+}
+.chatroom-section .col-livecams-wrap .livecam-thumbnail i {
+    position: absolute;     left: 6px;    top: 2px;
+    color: orangered;     display: none;
+    z-index: 999;
+    font-size: 1.2em;
+}
+.chatroom-section .col-livecams-wrap .livecam-thumbnail i:hover {
+    color: darkorange;
+}
+.chatroom-section .col-livecams-wrap .livecam-thumbnail .glyphicon {
+    position: absolute;     right: 6px;    top: 4px;
+    color: orangered;     display: none;
+    z-index: 999;
+}
+.chatroom-section .col-livecams-wrap .livecam-thumbnail .glyphicon:hover {
+    color: darkorange;
+}
+
+.chatroom-section .col-activecam-canvas {
+    float: left;    margin-left: 8px;
+    border: 0px solid skyblue;   box-sizing: border-box;
+    width: 45%;    min-width: 320px;
+    background: black;      position: relative;
+}
+.chatroom-section .col-activecam-canvas img {
+    width: 100%;	height: auto;   max-height: 100%;
+}
+.chatroom-section .col-activecam-canvas video {
+    position: absolute;     left: 0;    top: 0;
+    width: 100%;    height: 100%;
+    opacity: 0;
+}
+.chatroom-section .col-activecam-canvas .camhost-info-title {
+    color: white;
+    position: absolute;     left: 20px;    top: 0;
+}
+.chatroom-section .col-chatmsgs-wrap {
+    float: left;    margin-left: 8px;
+    border: 0px solid skyblue;   box-sizing: border-box;
+    min-width: 270px;       height: 100%;
+    width: 400px;
+}
+.chatroom-section .col-chatmsgs-wrap .container {
+    width: 100%;    height: 100%;
+    background: #eeeeee;        position: relative;
+}
+.chatroom-section .col-chatmsgs-wrap .container .input-msg-row{
+    position: absolute;     left: 0;    bottom: 3px;
+    margin-left: 6px;       margin-right: 6px;      padding: 0;
+}
+.chatroom-section .col-chatmsgs-wrap .container .input-msg-row .col-sm-12 {
+    padding: 0;
+}
+.chatroom-section .col-chatmsgs-wrap .container .input-group span {
+    padding: 0;     border: 0;
+}
+.chatroom-section .col-chatmsgs-wrap .container .input-group span button {
+    border-radius: 0;
+}
+.chatroom-section .col-chatmsgs-wrap .container .input-group span label {
+    border-radius: 0;
+}
+.chatroom-section .col-chatmsgs-wrap #ctrlMsgBtnWrap {
+    margin-top: 10px;
+}
+.chatroom-section .col-chatmsgs-wrap #ctrlMsgBtnWrap div {
+    text-align: center;
+}
+.chatroom-section .col-chatmsgs-wrap #ctrlMsgBtnWrap div a {
+    color: #5cb85c;     padding: 18px 8px 8px;
+}
+.chatroom-section .col-chatmsgs-wrap #ctrlMsgBtnWrap div a:hover {
+    background: #e2e2e2;
+}
+.chatroom-section .col-chatmsgs-wrap #ctrlMsgBtnWrap div span {
+    position: absolute;     top: 0;     margin-left: -10px;
+    padding: 3px;
+}
+.chatroom-section .col-chatmsgs-wrap #msgBtnPosBar {
+    border-bottom: 3px solid #d9534f;       box-sizing: border-box;
+    margin-left: 1%;     margin-right: 1%;      margin-top: 20px;       margin-bottom: 20px;
+}
+.chatroom-section .col-chatmsgs-wrap #ctrlMsgBtnWrap .red-ball-indicator {
+    width: 20px;    height: 20px;   border-radius: 50%;
+    background: #d9534f;    position: absolute;     top: 41px;      left: 45%;
+}
+.chatroom-section .col-chatmsgs-wrap #userList {
+    border: 0px solid cadetblue;    box-sizing: border-box;
+    overflow-y: auto;       overflow-x: hidden;       margin-bottom: 8px;
+}
+
+.popover-title {
+    display: none;
+}
+/*//////////////////////////*/
+
+.gallery-wrapper .well {
+    background: #898C8B;    font-weight: bold;      color: black;
+    padding: 3px;
+}
+.gallery-wrapper .well h3 {
+    margin: 0;
+}
+.gallery-wrapper p {
+    font-size: 1.3em;       text-align: left;
+}
+.gallery-wrapper .host-photo-wrap {
+    width: 240px;       height: auto;       float: left;
+    margin: 0 10px 10px 0;
+}
+.gallery-wrapper .host-photo-wrap img {
+    width: 240px;       height: 160px;
+}
+.gallery-wrapper .host-photo-wrap p {
+    text-align: center;     margin-top: 3px;
+}
+.gallery-wrapper .host-photo-wrap button {
+    height: 24px;       padding: 0 20px 0 20px;
+}
+.gallery-wrapper .host-add-photo-wrap {
+    width: 240px;       height: 160px;      text-align: center;
+    border: 3px solid #1fb049;      box-sizing: border-box;
+    color: #1fb049;     float: left;    padding-top: 20px;
+}
+.gallery-wrapper .host-video-wrap {
+    width: 240px;       height: auto;       float: left;
+    margin: 0 10px 10px 0;
+    cursor: pointer;
+    position: relative;
+}
+.gallery-wrapper .host-video-wrap p {
+    text-align: center;     margin-top: 3px;
+}
+.gallery-wrapper .host-video-wrap button {
+    height: 24px;       padding: 0 20px 0 20px;
+}
+.gallery-wrapper .host-video-wrap img {
+    position: absolute;     left: 0;    top: 0;
+    width: 100%;    height: auto;
+}
+.gallery-wrapper .host-add-video-wrap {
+    width: 240px;       height: 160px;      text-align: center;
+    border: 3px solid #1fb049;      box-sizing: border-box;
+    color: #1fb049;     float: left;    padding-top: 20px;
+}
+.gallery-wrapper .imagebox img:hover {
+    opacity: 0.8;       cursor: pointer;
+}
+.gallery-wrapper .host-add-photo-wrap:hover {
+    opacity: 0.8;       cursor: pointer;
+}
+.gallery-wrapper .host-add-video-wrap:hover {
+    opacity: 0.8;       cursor: pointer;
+}
+
+.gallery-wrapper #editDescriptionForm {
+    display: none;
+}
+.gallery-wrapper #editDescriptionForm button {
+    margin-top: 6px;	    width: 70px;
+}
+
+/*////////////////////////////*/
+#privateChatModal .modal-header {
+    position: relative;     padding: 6px 0;
+}
+#privateChatModal .modal-header button {
+    border: 0;
+}
+#privateChatModal .modal-header .close {
+    margin-top: 12px;       margin-right: 8px;
+}
+#privateChatModal .modal-header .goback-btn {
+    position: absolute;     left: 4px;    top: 12px;
+    opacity: 0.2;
+}
+#privateChatModal .modal-header .goback-btn:hover {
+    opacity: 1;
+}
+#privateChatModal .modal-header .dropdown {
+    position: absolute;     right: 24px;    top: 12px;
+    opacity: 0.2;
+}
+#privateChatModal .modal-header .dropdown:hover {
+    opacity: 1;
+}
+#privateChatModal .modal-header .prvchat-title {
+    border: 0px solid indianred;    box-sizing: border-box;
+    width: 100%;        margin-bottom: 0;
+    text-align: center;
+}
+#privateChatModal .modal-body {
+    overflow-y: auto;       overflow-x: hidden;
+    height: 450px;
+}
+#privateChatModal .modal-body .panel {
+    background: #e0e7ed;        margin-bottom: 0;
+}
+#privateChatModal .modal-body .message-sent {
+    margin-bottom: 0;
+}
+#privateChatModal .modal-body .text-muted {
+    color: lightgray;
+}
+#privateChatModal .modal-footer {
+    background: #e6f1f7;        padding-top: 0;     padding-bottom: 10px;
+}
+
+/* toastr customization */
+.toast-pink {
+    background-color: #fa39c3;      position: relative;
+    text-align: center;     padding: 0 16px 12px 0 !important;
+}
+.toast-close-button {
+    margin-top: 16px;
+}
+
+/*===========================*/
+#joineduser_list .room-member-name {
+    margin: 0;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/*===========================*/
+#newMyRoomEventArrow {
+    position: absolute;     z-index: 9999;      display: none;
+    width: 58px;    height: 45px;
+    top: 100px;     left: 0;
+}

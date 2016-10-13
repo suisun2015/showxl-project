@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+        <meta charset="utf-8">
+        <title>AngularJS Chat / Alternating List</title>
+        <meta name="generator" content="Bootply" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="description" content="How to: Simple user chat list example with alternation rows using Angular and RandomUser.me&#39;s awesome API." />
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="js/lib/bootstrap-3.3.6/css/bootstrap.min.css">
+        <!-- Font-awesome core CSS -->
+        <link rel="stylesheet" href="js/lib/font-awesome-4.6.3/css/font-awesome.min.css">
+        <!-- CSS code from Bootply.com editor -->
+        
+        <style type="text/css">
+            body {
+              background-color: #eee;
+              color:#444;
+            }
+            .fa {
+              color:#fff;
+            }
+            
+            .pull-left {
+                float: left;
+            }
+            .pull-right {
+                float: right;
+            }
+
+            #userList {
+              display:none;
+            }
+
+            #loader {
+              position:absolute;
+              z-index:2;
+              width:100%;
+              text-align:center;
+              top:40%;
+            }
+        </style>
+    </head>
+    
+    <!-- HTML code from Bootply.com editor -->
+   
+    <body  >
+        
+        <i class="fa fa-spin fa-refresh fa-5x" id="loader"></i>
+        <div class="container" ng-app="myApp" ng-controller="Main"> 
+          <h2>AngularJS Example - User Chat List Example</h2>
+          <div class="row" id="userList">
+            <div ng-repeat="u in users" class="col-sm-12">
+              
+              <div class="row">
+                <div class="col-xs-2" ng-class-odd="'col-xs-push-10'">
+                  <a href="" ng-click="showUserModal($index)"><img title="{{u.name}}" src="{{u.picture}}" class="img-thumbnail img-responsive img-circle" ng-class-even="'pull-right'" ng-class-odd="'pull-left'" style="width:70px;"></a>
+                </div>  
+                <div class="col-xs-10" ng-class-odd="'col-xs-pull-2'">
+                  <div class="panel panel-default">
+                    <div class="panel-body">
+                      {{u.text||"Blah text goes here blah bla! Hello blah period."}}<br>
+                      <span class="label label-info">{{ u.date||randomDate() | date:'h:mma' }}</span>
+                    </div>
+                  </div>
+                </div><!--/col-->
+              </div><!--/row-->
+            
+            </div><!--/col-->
+          
+          </div><!--/row-->
+  
+          <div class="row">
+            <hr>
+            <h2 class="text-center">Got something to say?</h2>
+            <div class="col-sm-12">
+              <div class="input-group">
+                  <input class="form-control input-large" type="text" placeholder="Add to the conversation" id="inputText">
+                  <span class="input-group-addon" ng-click="doPost()">Post</span>
+                </div>
+            </div>
+            
+            <div class="clearfix"></div>
+            <hr>
+          </div>
+          
+          <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-info">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h1 id="myModalLabel" class="text-center"></h1>
+                </div>
+                <div class="modal-body">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-xs-4 col-xs-offset-4"><img src="{{currUser.picture}}" class="img-thumbnail img-responsive img-circle"></div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <h4 class="text-center"><i class="fa fa-fw fa-map-marker fa-2x"></i> {{currUser.name}} {{currUser.text}}, {{currUser.text}}</h4>
+                      <h4 class="text-center"><i class="fa fa-fw fa-phone fa-2x"></i> {{currUser.name}}</h4>
+                      <h4 class="text-center"><i class="fa fa-fw fa-envelope-o fa-2x"></i> {{currUser.text}}</h4>
+                      <h4 class="text-center"><i class="fa fa-fw fa-user fa-2x"></i> {{currUser.name}}</h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer bg-info">
+                    <button class="btn btn-lg btn-default center-block" data-dismiss="modal" aria-hidden="true">Okay!</button>
+                </div>
+            </div>
+            </div>
+          </div><!--/modal-->
+          
+        </div><!--/container-->
+        
+        <script src="js/lib/jquery1.12.4.min.js"></script><!-- core jQuery library 4 Bootstrap -->
+        <script src="js/lib/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+        <script src="js/lib/angularjs-1.5.7/angular.min.js"></script>
+
+        <!-- JavaScript jQuery code from Bootply.com editor  -->
+        
+<script type='text/javascript'>
+
+
+  //$(document).ready(function() {});
+  function randomDate(start, end) {
+      return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+  }
+
+  var myApp = angular.module('myApp', []);
+  myApp.controller('Main', function($scope, $http) {
+    $scope.users = [
+        {text:'Hello1',name:'kym',picture:'images/user.png',date:''},
+        {text:'Hello2',name:'kym1',picture:'images/user.png',date:''},
+        {text:'Hello3',name:'kym2',picture:'images/user.png',date:''},
+        {text:'Hello4',name:'kym4',picture:'images/user.png',date:''},
+        {text:'Hello5',name:'kym5',picture:'images/user.png',date:''}
+        ];
+
+    $('#loader').hide();
+    $('#userList').show();
+
+    $scope.randomDate = function() {
+      var start = new Date(2013,1,2);
+      var end = new Date();
+      return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+    }
+    
+    $scope.showUserModal = function(idx){
+      var user = $scope.users[idx];
+      $scope.currUser = user;
+      $('#myModalLabel').text(user.name
+          + ' ' + user.text);
+      $('#myModal').modal('show');
+    }
+    
+    $scope.doPost = function() {
+        var newUser = {text:'Hello',name:'kym',picture:'images/user.png',date:''};
+        newUser.text = $('#inputText').val();
+        newUser.date = new Date();
+        $scope.users.push(newUser);
+    }
+	});
+  </script>
+     
+    </body>
+</html>

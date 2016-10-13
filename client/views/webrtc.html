@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name='keywords' content='WebRTC, HTML5, JavaScript' />
+    <meta name='description' content='WebRTC Reference App' />
+    <meta name='viewport' content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1'>
+    <base target='_blank'>
+    <title>Video & Text Chat</title>
+    <!-- <link rel='stylesheet' href='css/main.css' /> -->
+    <script src='js/lib/jquery-3.1.0.min.js'></script>
+
+</head>
+<body>
+    <table align="center" border="1" >
+        <tr bgcolor="#bbbbbb">
+            <td align="center">Video Chating Demo</td>
+        </tr>
+        <tr>
+            <td>
+                <table align="center" border="1">
+                    <tr>
+                        <td align="center" width="160px">
+                            Users
+                        </td>
+                        <td align="center" width="200px">
+                            Local Video
+                        </td>
+                        <td align="center" width=" = 200px">
+                            Remote Video
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" width="160px">
+                            <select id="userBox" size='10' style="width: 150px">
+                            </select>
+                            <a><button id="Call">Call</button></a>
+                            <a><button id="Receive">Receive</button></a>
+                            <a><button id="HangUp">Hang Up</button></a>
+
+                        </td>
+                        <td width="200px">
+                            <video id='localVideo' width="320" height="240" autoplay muted></video>
+                        </td>
+                        <td width="200px">
+                            <video id='remoteVideo' width="320" height="240" autoplay></video>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+
+        </tr>
+        <tr>
+            <td align="center" >
+                <a id="status">call user...</a>
+            </td>
+        </tr>
+        <tr bgcolor="#bbbbbb">
+            <td align="center">Text Chating</td>
+        </tr>
+        <tr>
+            <td>
+                <select id="chatBox" size='10' style="width:100%">
+                </select>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table>
+                    <tr>
+                        <td style="width:100%">
+                            <textarea id="dataChannelSend" style="width:98%" disabled placeholder="Press Start, enter some text, then press Send."></textarea>
+                        </td>
+                        <td>
+                            <button id="sendButton" disabled>Send</button>
+                            <button id="REST" >REST</button>
+                        </td>
+                    </tr>
+                </table>
+                
+            </td>
+        </tr>
+    </table>
+
+    <script src='socket.io/socket.io.js'></script>
+    <script src='js/lib/adapter.js'></script>
+    <script src='js/restapi.js'></script>
+    <script src='js/webrtc_connector.js'></script>
+    <script src='js/webrtc.js'></script>
+
+</body>
+</html>

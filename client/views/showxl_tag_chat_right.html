@@ -1,0 +1,13 @@
+<div id="chat-{{tabIndex+'-'+$index}}" class="col-xs-2" style="padding:0; text-align:center">
+    <img title="{{chat.nickname}}" src="{{getPhoto(chat)}}" ng-click="onClickPhoto(chat,tabIndex,$index)"
+         class="img-thumbnail img-circle" style="width:70px; min-width:70px; height:70px; cursor:pointer">
+</div>
+<div class="col-xs-10" style="padding-left:0">
+    <div class="panel panel-default">
+        <div class="panel-body" style="text-align:left; word-wrap:break-word">
+            <p class="text-success small">{{chat.nickname + ' ' + chat.age}}y</p>
+            <p class="message-sent" ng-bind-html="chat.message | trustAsHtml" style="margin:0; font-size:1.2em"></p>
+            <!--<p class="text-muted small" style="margin:0">{{ chat.date||randomDate() | date:'h:mma' }}</p>-->
+        </div>
+    </div>
+</div>

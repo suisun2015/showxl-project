@@ -1,0 +1,55 @@
+<div id="joinedUser-{{GlobalIndex}}" ng-controller="showxl_chatroom_joineduser" ng-init="onload($index)">
+    <div class="row" id="joineduser_list" style="overflow-y:auto">
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-xs-2" style="padding:0 0 0 8px; text-align:center">
+                    <img title="{{room.nickname}}" src="{{getPhoto(room.photo)}}"
+                         class="img-thumbnail img-circle" style="width:70px; min-width:70px; height:70px">
+                </div>
+                <div class="col-xs-10">
+                    <div class="panel panel-default">
+                        <div class="panel-body" style="text-align:left">
+                            <div class="col-xs-12" style="padding:0">
+                                <h4 class="room-member-name text-success pull-left">
+                                    {{room.nickname}}
+                                </h4>
+                                <h4 class="text-success" style="margin:0; float:left">&nbsp;{{room.age}}y</h4>
+                                <p ng-if="room.incoming==0" class="small pull-right">{{getRoomCity()}} <span class="flag-icon flag-icon-{{getRoomCountryFlag()}}"></span></p>
+                            </div>
+                            <div class="col-xs-12" style="padding:0;">
+                                <i ng-if="room.nickname!=owner.nickname" class="fa fa-envelope-o fa-2x" aria-hidden="true" ng-click="onPrivate(room)" style="cursor:pointer"></i>
+                                <p class="small pull-right" style="margin:12px 0 0 0">{{getRoomDistance()}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- host info -->
+            </div>
+            <div class="row" ng-repeat="user in users">
+                <div class="col-xs-2" style="padding:0 0 0 8px; text-align:center">
+                    <img title="{{user.nickname}}" src="{{getPhoto(user.photo)}}"
+                        class="img-thumbnail img-circle" style="width:70px; min-width:70px; height:70px">
+                </div>
+                <div class="col-xs-10">
+                    <div class="panel panel-default">
+                        <div class="panel-body" style="text-align:left">
+                            <div class="col-xs-12" style="padding:0">
+                                <h4 class="room-member-name pull-left">
+                                    {{user.nickname}}
+                                </h4>
+                                <h4 style="margin:0; float:left">&nbsp;{{user.age}}y</h4>
+                                <p ng-if="user.incoming==0" class="small pull-right">{{user.city}} <span class="flag-icon flag-icon-{{getCountryFlag(user.country)}}"></span></p>
+                            </div>
+                            <div class="col-xs-12" style="padding:0;">
+                                <i ng-if="user.nickname!=owner.nickname" class="fa fa-envelope-o fa-2x" aria-hidden="true" ng-click="onPrivate(user)" style="cursor:pointer"></i>
+                                <i ng-if="getHomeStatus(user)" class="fa fa-home fa-2x" aria-hidden="true" ng-click="onHome(user)" style="cursor:pointer"></i>
+                                <i ng-if="room.nickname==owner.nickname" ng-click="onRemoveUser(user)" class="fa fa-trash-o fa-2x" aria-hidden="true" style="cursor:pointer"></i>
+                                <p ng-if="user.nickname!=owner.nickname&&user.incoming==0" class="small pull-right" style="margin:12px 0 0 0">{{getDistance(user)}} km</p>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- joined user info -->
+            </div>
+        </div>
+    </div>
+    <!--///////////////////////////////////////////////////////////////-->
+</div><!--/container-->

@@ -1,0 +1,20 @@
+<div id="tabroompopment" ng-init="onload()">
+    <div class="modal-header" style="padding:6px">
+        <h4 class="text-info text-center" style="white-space:nowrap; overflow:hidden; text-overflow:ellipsis; margin:0">
+            {{nickname + ' ' + age + 'y'}}
+        </h4>
+    </div>
+    <div class="modal-body">
+        <div class="list-group" style="width:140px; margin-bottom:0">
+            <a ng-click="onClick(0)" class="list-group-item" style="border:0; padding:6px; cursor:pointer">
+                Private Message
+            </a>
+            <a ng-click="onClick(1)"  class="list-group-item" style="border:0; padding:6px; cursor:pointer">
+                Ban the User
+            </a>
+            <a ng-click="onClick(2)"  class="list-group-item" style="border:0; padding:6px; cursor:pointer">
+                Kick the User
+            </a>
+        </div>
+    </div>
+</div>

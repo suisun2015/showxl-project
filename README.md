@@ -17,6 +17,7 @@ WebRTC LiveChat application for Social Dating built with MEAN Stack
 
 ```
 # WebRTC-based LiveChat
+# Shoot record & snapshot using WebCam
 # Socket.io Chatting - Public & Private
 # User & Chatroom Management
 # Upload & Transfer Data such as video, image, files and so on

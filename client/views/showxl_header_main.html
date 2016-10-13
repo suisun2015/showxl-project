@@ -1,0 +1,23 @@
+<div ng-controller="showxl_header_main" class="container-fluid" style="padding: 0;">
+    <div class="row" id="titleBar">
+        <div id="leftPart">
+            <img src="images/icon_cam.png" alt="icon logo">
+        </div>
+        <div id="centerPart">
+            <img src="images/logo.jpg" alt="motto logo">
+        </div>
+        <div id="rightPart">
+            <div class="userinfo-section">
+                <a ng-click="logout()" style="cursor:pointer" title="Logout">
+                    <div class="info_avatar">
+                        <img src="{{getOwnerPhoto()}}" alt="User">
+                    </div>
+                    <div class="info_nickname">{{owner.nickname}}</div>
+                </a>
+            </div>
+            <div class="golive-cam-section" ng-click="showDialog4CreateRoom()">
+                <img src="{{getGoLive()}}" alt="Go live your webcam">
+            </div>
+        </div>
+    </div>
+</div>
