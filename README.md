@@ -1,4 +1,4 @@
-# SHOWxl---WebRTC-LiveChat
+# SHOWxl - LiveChat
 WebRTC LiveChat application for Social Dating built with MEAN Stack
 
 + [Try it](https://ec2-54-191-222-159.us-west-2.compute.amazonaws.com:4500/) `※ Use WebCam for liveness, if possible`
